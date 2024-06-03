@@ -4,8 +4,9 @@ from PIL import Image  # biblioteca incluida em streamlit
 st.title("Selfie to Grayscale")
 st.subheader("A simple program that converts a selfie or photo to grayscale")
 
-# inicia prompt da camera
-image = st.camera_input("Camera")
+with st.expander("Run Camera"):  # botão/ação para iniciar a camera
+    # inicia prompt da camera
+    image = st.camera_input("Camera")
 
 if image:  # após o usuário permitir o acesso à camera
     # cria objeto de imagem pillow
